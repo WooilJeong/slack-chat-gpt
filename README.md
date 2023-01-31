@@ -4,9 +4,9 @@
 
 <div align="center">
 
-<img src="https://github.com/WooilJeong/slack-chat-gpt/blob/main/img/ex1.png?raw=true" width="500" />
+<img src="https://github.com/WooilJeong/slack-chat-gpt/blob/main/img/ex1.png?raw=true" width="800" />
 
-<img src="https://github.com/WooilJeong/slack-chat-gpt/blob/main/img/ex1.png?raw=true" width="500" />
+<img src="https://github.com/WooilJeong/slack-chat-gpt/blob/main/img/ex2.png?raw=true" width="800" />
 
 </div>
 
