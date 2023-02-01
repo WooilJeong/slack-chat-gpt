@@ -1,5 +1,6 @@
 import openai
 from slack_sdk import WebClient
+from PyKakao import KoGPT
 
 
 class SlackAPI:
@@ -71,9 +72,9 @@ class OpenaiAPI:
     def __init__(self, api_key=None):
         self.api_key = api_key
 
-    def ChatGPT(self, prompt):
+    def completion(self, prompt):
         """
-        OpenAI Chat GPT API 호출
+        OpenAI completion API 호출
         """
         openai.api_key = self.api_key
         response = openai.Completion.create(
@@ -86,3 +87,21 @@ class OpenaiAPI:
             presence_penalty=0.0,
         )
         return response['choices'][0]['text']
+
+
+class KakaoAPI:
+    """
+    Kakao API 클래스
+    """
+
+    def __init__(self, api_key=None):
+        self.api_key = api_key
+
+    def kogpt(self, prompt):
+        """
+        Kakao OpenGPT API 호출
+        """
+        kogpt = KoGPT(self.api_key)
+        response = kogpt.generate(prompt, max_tokens=256, temperature=0.1)
+        response = response['generations'][0]['text']
+        return response
